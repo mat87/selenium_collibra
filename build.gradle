@@ -1,0 +1,23 @@
+group 'com.selenium.automation'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+ext.aspectjVersion = '1.8.8'
+ext.allureVersion = '1.4.14'
+ext.seleniumVersion = '2.53.0'
+ext.junitVersion = '4.12'
+ext.assertjVersion = '3.4.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.seleniumhq.selenium:selenium-java:${seleniumVersion}"
+    compile group: 'junit', name: 'junit', version: "${junitVersion}"
+    compile group: 'org.assertj', name: 'assertj-core', version: "${assertjVersion}"
+}
+
