@@ -99,7 +99,7 @@ public class TestDemo {
     public void test_print_whole_table(){
         driver.get("localhost:8000");
         basePage = new BasePage(driver);
-        basePage.getWholeTable();
+        basePage.getWholeTable(2, 2);
     }
 
     @AfterClass

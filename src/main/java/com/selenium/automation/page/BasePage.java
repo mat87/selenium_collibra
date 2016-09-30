@@ -37,18 +37,20 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void getWholeTable(){
+    public void getWholeTable(int myRow, int myColumn){
         List<WebElement> rows = driver.findElements(By.xpath("//*[@id='85483B148E3F8ED2']/div/div/div[1]/div[2]/div/div[1]/div[3]/div"));
         int rowsCount = rows.size();
         for (int row = 0; row < rowsCount; row++) {
             List<WebElement> columnsRow = rows.get(row).findElements(By.className("uf-table-cell-content"));
             int columns_count = columnsRow.size();
-            System.out.println("Cells in row " + row + " are " + columns_count);
+            //System.out.println("Cells in row " + row + " are " + columns_count);
             for (int column = 0; column < columns_count; column++) {
                 String celText = columnsRow.get(column).getText();
-                System.out.println("Row " + row + " | Column " + column + " | Cell content = " + celText);
+                //System.out.println("Row " + row + " | Column " + column + " | Cell content = " + celText);
+                if(row == myRow && column == myColumn){
+                    System.out.println(celText);
+                }
             }
-            System.out.println("****************************************");
         }
     }
 
