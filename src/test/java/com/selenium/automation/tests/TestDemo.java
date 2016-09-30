@@ -88,14 +88,14 @@ public class TestDemo {
     * "Company"
     * "Sentence"
     * */
-    @Test()
+    //@Test()
     public void test_column_resize(){
         driver.get("https://facebook.github.io/fixed-data-table/example-resize.html");
         basePage = new BasePage(driver);
         basePage.resizeColumn("Sentence", 50);
     }
 
-   // @Test()
+    @Test()
     public void test_print_whole_table(){
         driver.get("localhost:8000");
         basePage = new BasePage(driver);
@@ -104,6 +104,6 @@ public class TestDemo {
 
     @AfterClass
     public static void tearDown(){
-        //driver.quit();
+        driver.quit();
     }
 }

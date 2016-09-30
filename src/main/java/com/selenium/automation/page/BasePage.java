@@ -43,10 +43,10 @@ public class BasePage {
         for (int row = 0; row < rowsCount; row++) {
             List<WebElement> columnsRow = rows.get(row).findElements(By.className("uf-table-cell-content"));
             int columns_count = columnsRow.size();
-            System.out.println("Cells In Row " + row + " are " + columns_count);
+            System.out.println("Cells in row " + row + " are " + columns_count);
             for (int column = 0; column < columns_count; column++) {
                 String celText = columnsRow.get(column).getText();
-                System.out.println("Cell value of row number " + row + " and column number " + column + " is " + celText);
+                System.out.println("Row " + row + " | Column " + column + " | Cell content = " + celText);
             }
             System.out.println("****************************************");
         }
